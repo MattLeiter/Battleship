@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/dimension2"
+        android:layout_marginStart="@dimen/dimension2"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scaleType="matrix" />
+
+    <Button
+        android:id="@+id/buttonLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bbutton"
+        android:text="Link"/>
+    <Button
+        android:id="@+id/buttonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"   
+        android:background="@drawable/bbutton"    
+        android:text="Name" />
+
+    <Button
+        android:id="@+id/buttonErase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonText"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bbutton"
+        android:text="Erase" />
+
+    <Button
+        android:id="@+id/buttonCirc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonLink"
+        android:background="@drawable/bbutton"
+        android:text="Node" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonErase"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bbutton"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/buttonWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonCirc"
+        android:background="@drawable/bbutton"
+        android:text="Write" />
+
+    <Button
+        android:id="@+id/buttonData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Data" 
+        android:background="@drawable/bbutton"/>
+
+    <Button
+        android:id="@+id/buttonMMENU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Menu" />
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <Button
+        android:id="@+id/FreeButton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/freebutton"
+        android:text="Graph"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/ButtonScribble"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/freebutton"
+        android:text="Scribble"
+        android:textColor="@android:color/white" />
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="fill_parent"
+        android:layout_alignRight="@+id/View01"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white" />
+
+    <View
+        android:id="@+id/View01"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/ButtonChart"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="21dp"
+        android:background="@drawable/circle" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_alignLeft="@+id/View02"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/white" />
+
+    <View
+        android:id="@+id/View02"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/View01"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle" />
+
+    <Button
+        android:id="@+id/ButtonChart"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/freebutton"
+        android:text="Chart"
+        android:textColor="@android:color/white" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/ButtonChart"
+        android:layout_alignParentRight="true"
+        android:animation="@android:anim/slide_in_left"
+        android:animationOrder="normal"
+        android:background="@drawable/circle"
+        android:delay="25%" />
+
+</RelativeLayout>
