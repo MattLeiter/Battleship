@@ -32,25 +32,23 @@ def generateRandomRowCol():
 	return row, column
 
 def generateCoordinates(len):
-	good = FALSE;
-
+	good = False
 	# Until a valid move is generated
-	while !good:
-		moveList = [];
-		amt = 0;
-		row, column = generateRandomRowCol();
-		direction = getRandomDirection();
+	while ~good:
+		moveList = []
+		amt = 0
+		row, column = generateRandomRowCol()
+		direction = getRandomDirection()
 
 		# Generate a moveList
 		while amt < len:
-
 			#If vertical, add to row
-			if(direction) {
-				moveList.append((row + 1, column))
-			} #If horizontal, add to column 
-			else {
-				moveList.append((row, column + 1))
-			}
+			if direction:
+                moveList.append((row + 1, column))
+			# If horizontal, add to column
+            else:
+                moveList.append((row, column + 1))
+
 
 		good = isPlacementValid(moveList)
 
@@ -65,19 +63,19 @@ def placeShips(opponentID):
 	grid = [[-1 for x in range(8)] for x in range(8)] # Fill Grid With -1s
 
 	# Place Ships
-	low, high = generateCoordinates(2);
+	low, high = generateCoordinates(2)
 	placeDestroyer(low, high) # Ship Length = 2
 	
-	low, high = generateCoordinates(3);
+	low, high = generateCoordinates(3)
 	placeSubmarine(low, high) # Ship Length = 3
 	
-	low, high = generateCoordinates(3);
+	low, high = generateCoordinates(3)
 	placeCruiser(low, high) # Ship Length = 3
 
-	low, high = generateCoordinates(4);
+	low, high = generateCoordinates(4)
 	placeBattleship(low, high) # Ship Length = 4
 
-	low, high = generateCoordinates(5);
+	low, high = generateCoordinates(5)
 	placeCarrier(low, high) # Ship Length = 5
 
 def makeMove():
