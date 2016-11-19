@@ -9,6 +9,7 @@
 import sys
 import socket
 import time
+import random
 
 API_KEY = "764488458" ########## PUT YOUR API KEY HERE ##########
 
@@ -20,6 +21,12 @@ letters = ['A','B','C','D','E','F','G','H']
 grid = [[-1 for x in range(8)] for x in range(8)] # Fill Grid With -1s
 
 storedPlacements = []
+
+
+def getRandomDirection():
+    return random.getrandbits(1)
+
+
 
 def placeShips(opponentID):
 	global grid
