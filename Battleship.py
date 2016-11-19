@@ -33,6 +33,7 @@ def generateRandomRowCol():
 
 def generateCoordinates(len):
 	good = False
+
 	# Until a valid move is generated
 	while ~good:
 		moveList = []
@@ -44,16 +45,25 @@ def generateCoordinates(len):
 		while amt < len:
 			#If vertical, add to row
 			if direction:
-                moveList.append((row + 1, column))
+				coor = letter[row] + column
+				moveList.append(coor)
+				row++
 			# If horizontal, add to column
-            else:
-                moveList.append((row, column + 1))
+			else:
+				coor = letter[row] + column
+				moveList.append(coor)
+				column++
 
+			amt++
 
-		good = isPlacementValid(moveList)
+			if amt < len && (row == 7 || column == 7): 
+				break
 
-	low  = letters[moveList[0][0]] + moveList[0][1] 
-	high = letters[moveList[len - 1][0]] + moveList[len - 1][1]
+		if moveList.len == amt:
+			good = isPlacementValid(moveList)
+
+	low  = moveList[0]
+	high = moveList[len - 1]
 	return low, high
 
 
