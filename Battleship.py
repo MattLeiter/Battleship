@@ -24,7 +24,7 @@ storedPlacements = []
 
 
 def getRandomDirection():
-    return random.getrandbits(1)
+	return random.getrandbits(1)
 
 def generateRandomRowCol():
 	row = random.randint(0, 7);
@@ -56,6 +56,7 @@ def generateCoordinates(len):
 
 			amt++
 
+			# If horizontal, add to column
 			if amt < len && (row == 7 || column == 7): 
 				break
 
@@ -65,6 +66,13 @@ def generateCoordinates(len):
 	low  = moveList[0]
 	high = moveList[len - 1]
 	return low, high
+
+
+# 0-3, a-d
+
+def firstHop():
+
+def randomHop(colStart, colEnd, rowStart, rowEnd):
 
 
 def placeShips(opponentID):
