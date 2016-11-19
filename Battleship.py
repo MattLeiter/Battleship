@@ -26,6 +26,32 @@ storedPlacements = []
 def getRandomDirection():
     return random.getrandbits(1)
 
+def generateCoordinates(len):
+	good = FALSE;
+
+	# Until a valid move is generated
+	while !good:
+		moveList = [];
+		amt = 0;
+		row, column = generateRandomRowCol();
+		direction = getRandomDirection();
+
+		# Generate a moveList
+		while amt < len:
+
+			#If vertical, add to row
+			if(direction) {
+				moveList.append((row + 1, column))
+			} #If horizontal, add to column 
+			else {
+				moveList.append((row, column + 1))
+			}
+
+		good = isPlacementValid(moveList)
+
+	low  = letters[moveList[0][0]] + moveList[0][1] 
+	high = letters[moveList[len - 1][0]] + moveList[len - 1][1]
+	return low, high
 
 
 def placeShips(opponentID):
@@ -34,11 +60,20 @@ def placeShips(opponentID):
 	grid = [[-1 for x in range(8)] for x in range(8)] # Fill Grid With -1s
 
 	# Place Ships
-	placeDestroyer("A0","A1") # Ship Length = 2
-	placeSubmarine("B0","B2") # Ship Length = 3
-	placeCruiser("C0","C2") # Ship Length = 3
-	placeBattleship("D0","D3") # Ship Length = 4
-	placeCarrier("E0","E4") # Ship Length = 5
+	low, high = generateCoordinates(2);
+	placeDestroyer(low, high) # Ship Length = 2
+	
+	low, high = generateCoordinates(3);
+	placeSubmarine(low, high) # Ship Length = 3
+	
+	low, high = generateCoordinates(3);
+	placeCruiser(low, high) # Ship Length = 3
+
+	low, high = generateCoordinates(4);
+	placeBattleship(low, high) # Ship Length = 4
+
+	low, high = generateCoordinates(5);
+	placeCarrier(low, high) # Ship Length = 5
 
 def makeMove():
 	global grid
