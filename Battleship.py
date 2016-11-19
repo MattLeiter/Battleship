@@ -26,6 +26,11 @@ storedPlacements = []
 def getRandomDirection():
     return random.getrandbits(1)
 
+def generateRandomRowCol():
+	row = random.randint(0, 7);
+	column = random.randint(0, 7);
+	return row, column
+
 def generateCoordinates(len):
 	good = FALSE;
 
