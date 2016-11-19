@@ -10,7 +10,7 @@ import sys
 import socket
 import time
 
-API_KEY = "API_KEY_HERE" ########## PUT YOUR API KEY HERE ##########
+API_KEY = "764488458" ########## PUT YOUR API KEY HERE ##########
 
 GAME_SERVER = "battleshipgs.purduehackers.com"
 
